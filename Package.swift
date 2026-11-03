@@ -4,30 +4,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "CodeEditSourceEditor",
+    name: "BCSourceEditor",
     platforms: [.macOS(.v13)],
     products: [
         // A source editor with useful features for code editing.
         .library(
-            name: "CodeEditSourceEditor",
-            targets: ["CodeEditSourceEditor"]
+            name: "BCSourceEditor",
+            targets: ["BCSourceEditor"]
         )
     ],
     dependencies: [
         // A fast, efficient, text view for code.
         .package(
-            url: "https://github.com/CodeEditApp/CodeEditTextView.git",
-            from: "0.12.1"
+            url: "https://github.com/scholzdev/BCTextView.git",
+            revision: "e104ce792a4ceb0c947faca3775c85d06dee8708"
         ),
         // tree-sitter languages
         .package(
-            url: "https://github.com/CodeEditApp/CodeEditLanguages.git",
-            exact: "0.1.20"
-        ),
-        // CodeEditSymbols
-        .package(
-            url: "https://github.com/CodeEditApp/CodeEditSymbols.git",
-            exact: "0.2.3"
+            url: "https://github.com/scholzdev/BCLanguages.git",
+            revision: "1896740bdd6fde137e084216bd7d6f29c9f6622b"
         ),
         // SwiftLint
         .package(
@@ -44,12 +39,11 @@ let package = Package(
     targets: [
         // A source editor with useful features for code editing.
         .target(
-            name: "CodeEditSourceEditor",
+            name: "BCSourceEditor",
             dependencies: [
-                "CodeEditTextView",
-                "CodeEditLanguages",
-                "TextFormation",
-                "CodeEditSymbols"
+                "BCTextView",
+                "BCLanguages",
+                "TextFormation"
             ],
             plugins: [
                 .plugin(name: "SwiftLint", package: "SwiftLintPlugin")
@@ -58,10 +52,10 @@ let package = Package(
 
         // Tests for the source editor
         .testTarget(
-            name: "CodeEditSourceEditorTests",
+            name: "BCSourceEditorTests",
             dependencies: [
-                "CodeEditSourceEditor",
-                "CodeEditLanguages",
+                "BCSourceEditor",
+                "BCLanguages",
                 .product(name: "CustomDump", package: "swift-custom-dump")
             ],
             plugins: [

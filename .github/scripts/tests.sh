@@ -14,7 +14,7 @@ echo "Building with arch: ${ARCH}"
 export LC_CTYPE=en_US.UTF-8
 
 set -o pipefail && arch -"${ARCH}" xcodebuild  \
-           -scheme CodeEditSourceEditor \
+           -scheme BCSourceEditor \
            -derivedDataPath ".build" \
            -destination "platform=macOS,arch=${ARCH},name=My Mac" \
            -skipPackagePluginValidation \

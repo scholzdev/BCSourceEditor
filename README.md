@@ -1,14 +1,17 @@
+> [!NOTE]
+> **BCSourceEditor is a fork of [CodeEditSourceEditor](https://github.com/CodeEditApp/CodeEditSourceEditor)** 0.15.1 (MIT, see [LICENSE.md](LICENSE.md)), maintained for [b-code](https://github.com/scholzdev/b-code). It depends on the BCTextView and BCLanguages forks and no longer depends on CodeEditSymbols. Badges and links below are upstream's.
+
 <p align="center">
   <img src="https://github.com/CodeEditApp/CodeEditTextView/blob/main/.github/CodeEditSourceEditor-Icon-128@2x.png?raw=true" height="128">
-  <h1 align="center">CodeEditSourceEditor</h1>
+  <h1 align="center">BCSourceEditor</h1>
 </p>
 
 
 <p align="center">
-  <a aria-label="Follow CodeEdit on X" href="https://x.com/CodeEditApp" target="_blank">
+  <a aria-label="Follow b-code on X" href="https://x.com/CodeEditApp" target="_blank">
     <img alt="" src="https://img.shields.io/badge/Follow%20@CodeEditApp-black.svg?style=for-the-badge&logo=X">
   </a>
-    <a aria-label="Follow CodeEdit on Bluesky" href="https://bsky.app/profile/codeedit.app" target="_blank">
+    <a aria-label="Follow b-code on Bluesky" href="https://bsky.app/profile/codeedit.app" target="_blank">
     <img alt="" src="https://img.shields.io/badge/Follow%20@CodeEditApp-black.svg?style=for-the-badge&logo=Bluesky">
   </a>
   <a aria-label="Join the community on Discord" href="https://discord.gg/vChUXVf9Em" target="_blank">
@@ -19,7 +22,7 @@
   </a>
 </p>
 
-An Xcode-inspired code editor view written in Swift powered by tree-sitter for [CodeEdit](https://github.com/CodeEditApp/CodeEdit). Features include syntax highlighting (based on the provided theme), code completion, find and replace, text diff, validation, current line highlighting, minimap, inline messages (warnings and errors), bracket matching, and more.
+An Xcode-inspired code editor view written in Swift powered by tree-sitter for [b-code](https://github.com/CodeEditApp/CodeEdit). Features include syntax highlighting (based on the provided theme), code completion, find and replace, text diff, validation, current line highlighting, minimap, inline messages (warnings and errors), bracket matching, and more.
 
 <img width="1012" alt="social-cover-textview" src="https://user-images.githubusercontent.com/806104/194083584-91555dce-ad4c-4066-922e-1eab889134be.png">
 
@@ -30,7 +33,7 @@ An Xcode-inspired code editor view written in Swift powered by tree-sitter for [
 [![Discord Badge](https://img.shields.io/discord/951544472238444645?color=5865F2&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vChUXVf9Em)
 
 > [!IMPORTANT]
-> **CodeEditSourceEditor is currently in development and it is not ready for production use.** <br> Please check back later for updates on this project. Contributors are welcome as we build out the features mentioned above!
+> **BCSourceEditor is currently in development and it is not ready for production use.** <br> Please check back later for updates on this project. Contributors are welcome as we build out the features mentioned above!
 
 ## Documentation
 
@@ -38,12 +41,12 @@ This package is fully documented [here](https://codeeditapp.github.io/CodeEditSo
 
 ## Usage (SwiftUI)
 
-CodeEditSourceEditor provides two APIs for creating an editor: SwiftUI and AppKit. The SwiftUI API provides extremely customizable and flexible configuration options, including two-way bindings for state like cursor positions and scroll position. 
+BCSourceEditor provides two APIs for creating an editor: SwiftUI and AppKit. The SwiftUI API provides extremely customizable and flexible configuration options, including two-way bindings for state like cursor positions and scroll position. 
 
 For more complex features that require access to the underlying text view or text storage, we've developed the [TextViewCoordinators](https://codeeditapp.github.io/CodeEditSourceEditor/documentation/codeeditsourceeditor/textviewcoordinators) API. Using this API, developers can inject custom behavior into the editor as events happen, without having to work with state or bindings.
 
 ```swift
-import CodeEditSourceEditor
+import BCSourceEditor
 
 struct ContentView: View {
     @State var text = "let x = 1.0"
@@ -97,7 +100,7 @@ An AppKit API is also available.
 
 ## Currently Supported Languages
 
-See this issue https://github.com/CodeEditApp/CodeEditLanguages/issues/10 on `CodeEditLanguages` for more information on supported languages.
+See this issue https://github.com/CodeEditApp/CodeEditLanguages/issues/10 on `BCLanguages` for more information on supported languages.
 
 ## Dependencies
 
@@ -118,19 +121,19 @@ Licensed under the [MIT license](https://github.com/CodeEditApp/CodeEdit/blob/ma
     <td align="center">
       <a href="https://github.com/CodeEditApp/CodeEdit">
         <img src="https://github.com/CodeEditApp/CodeEdit/blob/main/.github/CodeEdit-Icon-128@2x.png?raw=true" width="128" height="128">
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CodeEdit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b-code&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/CodeEditApp/CodeEditTextView">
         <img src="https://github.com/CodeEditApp/CodeEditTextView/blob/main/.github/CodeEditTextView-Icon-128@2x.png?raw=true" width="128" height="128">
-        <p>CodeEditTextView</p>
+        <p>BCTextView</p>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/CodeEditApp/CodeEditLanguages">
         <img src="https://github.com/CodeEditApp/CodeEditLanguages/blob/main/.github/CodeEditLanguages-Icon-128@2x.png?raw=true" height="128">
-        <p>CodeEditLanguages</p>
+        <p>BCLanguages</p>
       </a>
     </td>
         <td align="center">

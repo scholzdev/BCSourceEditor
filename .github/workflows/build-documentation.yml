@@ -36,18 +36,18 @@ jobs:
       #
       # - uses: fwcd/swift-docc-action@v1.0.2
       #   with:
-      #     target: CodeEditTextView
+      #     target: BCTextView
       #     output: ./docs
-      #     hosting-base-path: CodeEditTextView
+      #     hosting-base-path: BCTextView
       #     disable-indexing: 'true'
       #     transform-for-static-hosting: 'true'
       #
       # The command that this plugin uses is:
       #
       # swift package --allow-writing-to-directory ./docs generate-documentation \
-      #       --target CodeEditTextView 
+      #       --target BCTextView 
       #       --output-path ./docs 
-      #       --hosting-base-path CodeEditTextView
+      #       --hosting-base-path BCTextView
       #       --disable-indexing 
       #       --transform-for-static-hosting
       #
