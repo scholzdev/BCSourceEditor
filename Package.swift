@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "BCSourceEditor",
-    platforms: [.macOS(.v13)],
+    platforms: [.macOS("27.0")],
     products: [
         // A source editor with useful features for code editing.
         .library(
@@ -17,12 +17,12 @@ let package = Package(
         // A fast, efficient, text view for code.
         .package(
             url: "https://github.com/scholzdev/BCTextView.git",
-            revision: "e104ce792a4ceb0c947faca3775c85d06dee8708"
+            revision: "a4d85a0893efa909be7e6c771b523e40f32cf0a4"
         ),
         // tree-sitter languages
         .package(
             url: "https://github.com/scholzdev/BCLanguages.git",
-            revision: "1896740bdd6fde137e084216bd7d6f29c9f6622b"
+            revision: "6764a1d6f847993ff6477ebd05de32349cf71ba9"
         ),
         // SwiftLint
         .package(
